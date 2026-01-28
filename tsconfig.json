@@ -1,0 +1,64 @@
+{
+  "compilerOptions": {
+    // Define a versão alvo do JavaScript para o qual o TypeScript será compilado
+    "target": "es2019",
+    // Especifica como resolver módulos (node = modo Node.js)
+    "moduleResolution": "node",
+    // Define o sistema de módulos (commonjs = padrão Node.js)
+    "module": "commonjs",
+    // Incluir bibliotecas TypeScript padrão do ES2019
+    "lib": ["es2019"],
+    // Gera arquivos .map para facilitar debug no navegador/IDE
+    "sourceMap": true,
+    // Diretório onde os arquivos JavaScript compilados serão salvos
+    "outDir": "dist", 
+    // Ativa todas as verificações de tipo rigorosas
+    "strict": true,
+    // Não permite tipo 'any' implícito
+    "noImplicitAny": true,
+    // Trata null e undefined como tipos distintos
+    "strictNullChecks": true,
+    // Verifica tipos de funções com rigor
+    "strictFunctionTypes": true,
+    // Não permite 'this' sem tipo explícito
+    "noImplicitThis": true,
+    // Permite importar arquivos JSON como módulos
+    "resolveJsonModule": true,
+    // Garante que o código use modo estrito
+    "alwaysStrict": true,
+    // Remove comentários do código compilado
+    "removeComments": true,
+    // Funções devem retornar um valor explicitamente
+    "noImplicitReturns": true,
+    // Melhora compatibilidade entre módulos ES e CommonJS
+    "esModuleInterop": true,
+    // Permite importar módulos padrão sem a propriedade 'default'
+    "allowSyntheticDefaultImports": true,
+    // Define o diretório raiz para resolução de módulos
+    "baseUrl": ".",
+    // Cria alias de caminhos para imports mais limpos
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@test/*": ["./test/*"]
+    },
+    // Define diretórios raiz para resolução de módulos
+    "rootDirs": [
+      "./src",
+      "./test"
+    ],
+    // Habilita suporte a decoradores (experimentais)
+    "experimentalDecorators": true,
+    // Emite metadados de tipo para decoradores
+    "emitDecoratorMetadata": true
+  },
+  // Inclui estes padrões de arquivos na compilação
+  "include": [
+    "./src/**/*.ts",
+    "./test/**/*.ts"
+  ],
+  // Exclui estes padrões da compilação
+  "exclude": [
+    "./node_modules/*",
+    "dist"
+  ]
+}
